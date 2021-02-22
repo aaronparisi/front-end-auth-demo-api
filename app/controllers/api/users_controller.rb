@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
 
   def loggedInUser
     @user = current_user
-    render :show
+    render :show if @user
   end
   
   def create
