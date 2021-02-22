@@ -4,6 +4,6 @@ json.chirps do
   end
 end
 
-json.current_user do
-  json.username current_user.username
-end
+# json.current_user do
+#   json.username current_user.username
+# end
