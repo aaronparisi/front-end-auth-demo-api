@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users do
       resources :chirps, only: [:index]
+      
+      collection do
+        get '/current-user', to: 'users#loggedInUser'
+      end
     end
 
     resource :session, only: [:create, :destroy]
