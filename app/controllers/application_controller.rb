@@ -1,8 +1,10 @@
+# class ApplicationController < ActionController::Base
 class ApplicationController < ActionController::Base
   include ActionController::ImplicitRender
   include ActionView::Layouts
+
   # This will be on the assessment
-  # protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
 
   # make these methods available from within the views
   helper_method :current_user, :logged_in?
@@ -15,7 +17,7 @@ class ApplicationController < ActionController::Base
   def logout!
     # Scramble the current_user's session_token
     current_user.reset_session_token!
-
+    
     # Reset the session
     session[:session_token] = nil
   end
