@@ -198,7 +198,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-cors
   rails (~> 6.1.3)
-  rails_same_site_cookie (~> 0.1.8)
+  rails_same_site_cookie
   spring
   tzinfo-data (~> 1.2019, >= 1.2019.2)
 

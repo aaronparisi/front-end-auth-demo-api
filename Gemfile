@@ -32,7 +32,7 @@ gem 'pry-rails'
 gem 'jquery-rails'
 gem 'faker'
 gem 'rack-cors', :require => 'rack/cors'
-gem 'rails_same_site_cookie', '~> 0.1.8'
+gem 'rails_same_site_cookie'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
