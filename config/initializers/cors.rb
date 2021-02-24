@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:8080', 'http://localhost:5000', 'https://frontend-auth-frontend.herokuapp.com', 'http://www.frontend-auth.aaronparisidev.com/'
+    origins 'http://localhost:8080', 'http://localhost:5000', 'https://frontend-auth-frontend.herokuapp.com', 'http://www.frontend-auth.aaronparisidev.com'
 
     resource '*',
       headers: :any,
