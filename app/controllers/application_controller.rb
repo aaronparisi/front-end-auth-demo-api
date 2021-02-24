@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   def login!(user)
     # set the session_token for the connection to be the 
     session[:session_token] = user.session_token
+    response.headers['Set-Cookie'] += 'Secure;SameSite=None'
   end
   
   def logout!
@@ -20,6 +21,7 @@ class ApplicationController < ActionController::Base
     
     # Reset the session
     session[:session_token] = nil
+    response.headers['Set-Cookie'] += 'Secure;SameSite=None'
   end
 
   def current_user
